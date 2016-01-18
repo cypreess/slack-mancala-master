@@ -1,0 +1,1 @@
+mancala: python3 run.py

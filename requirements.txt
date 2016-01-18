@@ -1,0 +1,2 @@
+-e git+https://github.com/cypreess/py-mancala.git#egg=py-mancala
+-e git+https://github.com/lins05/slackbot.git@71e88d73577df1fe7c36a5c7b22e3e8e65035ad0#egg=slackbot
