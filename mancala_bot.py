@@ -58,7 +58,7 @@ def check_if_game_over(message):
 
 
 @respond_to('new game', re.IGNORECASE)
-def hi(message):
+def new_game(message):
     username = get_user(message)['name']
     running_games[username] = mancala.Board()
     can_make_move[username] = True
@@ -66,14 +66,19 @@ def hi(message):
     show_board(message)
 
 @respond_to('show board', re.IGNORECASE)
-def hi(message):
+def board(message):
     username = get_user(message)['name']
     running_games[username] = mancala.Board()
     message.reply('%s this is our game, is your memory *that* short?' % username)
     show_board(message)
 
+@respond_to('welcome', re.IGNORECASE)
+def board(message):
+    message.reply('I came here not to talk, I came here to play mancala')
+
+
 @respond_to('(?:play )?(\d+)$', re.IGNORECASE)
-def hi(message, move):
+def play(message, move):
     move = int(move)
     username = get_user(message)['name']
 
